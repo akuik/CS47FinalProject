@@ -29,5 +29,8 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true
+  "private": true,
+  "description": "To begin - git clone to your local folder",
+  "author": "",
+  "license": "ISC"
 }
