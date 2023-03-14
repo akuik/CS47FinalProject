@@ -1,5 +1,6 @@
 # CS47FinalProject Timeline
-## Add a brief summary of things changed
+
+(TODO: add a brief summary of things changed each time)
 
 1) Repo Initialization 
 2) Allen: Created initial app layout, navigation tabs (home/search/profile)
