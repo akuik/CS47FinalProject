@@ -1,11 +1,10 @@
-# CS47FinalProject
+# CS47FinalProject Timeline
 
-To begin
-- git clone to your local folder
+(TODO: add a brief summary of things changed each time)
 
-Process after editing a file/multiple files (do 'git status' to view which has been changed):
-- git add [filename] (or 'add --all')
-- git commit -m [give a brief message]
-If you want to add the changes to this remote repo (aka so I can also see/merge/change)
-- git push
+1) Repo Initialization 
+2) Created initial app layout, navigation tabs (home/search/profile)
+3) Cleared OS conflicts, created dev branch
+4) created backend utils (using GPT API to filter relevant events + event class struct)
+5) 
 
