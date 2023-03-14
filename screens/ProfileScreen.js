@@ -8,16 +8,40 @@ import {
 } from "react-native";
 import React from "react";
 import tw from "tailwind-react-native-classnames";
+import {CategorizeText} from "../utils/CategorizeText";
+
+async function testCategorize() {
+  let binOutput = "";
+  let numTokens = 0;
+  let kws = "CS Social Good Board Meeting Social Impact";
+  let tags = "Philosophy, CS, Piano, Food, Fun, Sustainability";
+  [binOutput, numTokens] = await CategorizeText(kws, tags);
+  console.log("tags: ", tags);
+  console.log("OUTPUT: ", binOutput);
+  console.log("tokens: ", numTokens);
+  tags = "Philosophy, Piano, Food, Sustainability";
+  [binOutput, numTokens] = await CategorizeText(kws, tags);
+  console.log("tags: ", tags);
+  console.log("OUTPUT: ", binOutput);
+  console.log("tokens: ", numTokens);
+  tags = "Philosophy, Piano, Sustainability";
+  [binOutput, numTokens] = await CategorizeText(kws, tags);
+  console.log("tags: ", tags);
+  console.log("OUTPUT: ", binOutput);
+  console.log("tokens: ", numTokens);
+}
 
 const ProfileScreen = () => {
   return (
     <View style={tw`items-center`}>
-      <Text style={tw`text-3xl font-bold`}>Profile</Text>
       <Text style={tw`font-bold`}>Andrew Kuik</Text>
       <Text>Hi I am Andrew, I enjoy...</Text>
-      {/* Create a template for a profile */}
-      <TouchableOpacity style={styles.appButtonContainer}>
-        <Text style={styles.appButtonText}>Edit Profile</Text>
+      <Text>Interests: </Text>
+
+      <TouchableOpacity
+        style={styles.appButtonContainer}
+        onPress={testCategorize}>
+        <Text style={styles.appButtonText}>Test Categorizer</Text>
       </TouchableOpacity>
     </View>
   );

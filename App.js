@@ -9,7 +9,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 import Header from "./components/Header";
-
+import "react-native-url-polyfill/auto";
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
 
